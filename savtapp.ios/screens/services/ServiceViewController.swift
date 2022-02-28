@@ -10,9 +10,6 @@ import UIKit
 class ServiceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var navigationBar: UINavigationBar!
-    @IBOutlet weak var navItem: UINavigationItem!
-    
     
     let list = ["banana", "cachorro", "cluher","banana", "cachorro", "cluher","banana", "cachorro", "cluher","banana", "cachorro", "cluher","banana", "cachorro", "cluher","banana", "cachorro", "cluher","banana", "cachorro", "cluher","banana", "cachorro", "cluher","banana", "cachorro", "cluher","banana", "cachorro", "cluher","banana", "cachorro", "cluher","banana", "cachorro", "cluher","banana", "cachorro", "cluher","banana", "cachorro", "cluher","banana", "In order for the table view to do this, you must also provide an estimatedRowHeight. In this case, 600 is just an arbitrary value that works well in this particular instance. For your own projects, you should pick a value that better conforms to the type of data that you’ll display.", "cluher"]
     
@@ -27,8 +24,6 @@ class ServiceViewController: UIViewController, UITableViewDelegate, UITableViewD
         return .topAttached
     }
     
-    
-    
     func configureTableView(){
         let nib = UINib(nibName: "ServiceTableViewCell", bundle: nil)
         
@@ -37,13 +32,12 @@ class ServiceViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
-        
     }
     
     func configureNavigationBar(){
-        navigationBar.delegate = self
-        navigationBar.prefersLargeTitles = true
-        navItem.largeTitleDisplayMode = .automatic
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.navigationBar.topItem?.title = "Serviços"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

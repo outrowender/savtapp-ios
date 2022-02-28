@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,39 +10,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServiceViewController" customModule="savtapp_ios" customModuleProvider="target">
             <connections>
-                <outlet property="navItem" destination="aZD-CA-vod" id="sJ4-aQ-yYx"/>
-                <outlet property="navigationBar" destination="WdF-SE-caI" id="t1E-wI-Ru8"/>
                 <outlet property="tableView" destination="ZfW-F0-UY5" id="wrq-y8-Y0j"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="servicerestore2" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZfW-F0-UY5">
-                    <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdF-SE-caI">
-                    <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                    <items>
-                        <navigationItem title="Serviços" id="aZD-CA-vod" userLabel="navigationComponent"/>
-                    </items>
-                    <navigationBarAppearance key="compactScrollEdgeAppearance"/>
-                </navigationBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="ZfW-F0-UY5" secondAttribute="bottom" id="8s9-fF-K7x"/>
-                <constraint firstItem="WdF-SE-caI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="DW5-AH-0hN"/>
-                <constraint firstItem="WdF-SE-caI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HHR-cM-HEh"/>
-                <constraint firstItem="ZfW-F0-UY5" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="NB9-Ay-Pqp"/>
-                <constraint firstItem="ZfW-F0-UY5" firstAttribute="top" secondItem="WdF-SE-caI" secondAttribute="bottom" id="Vf2-yY-TVQ"/>
-                <constraint firstItem="ZfW-F0-UY5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="f1k-YS-hCy"/>
-                <constraint firstItem="WdF-SE-caI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="qC1-Py-UOR"/>
+                <constraint firstItem="ZfW-F0-UY5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7Mr-5e-ImN"/>
+                <constraint firstItem="ZfW-F0-UY5" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Pid-vF-Uch"/>
+                <constraint firstItem="ZfW-F0-UY5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="StO-Nn-8TF"/>
+                <constraint firstAttribute="bottom" secondItem="ZfW-F0-UY5" secondAttribute="bottom" id="rzO-kG-NEL"/>
             </constraints>
             <point key="canvasLocation" x="132" y="38.423645320197046"/>
         </view>
