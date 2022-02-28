@@ -1,1 +1,3 @@
-# An iOS simple app for study purposes
+# SavtApp iOS
+
+An iOS simple app for study purposes
