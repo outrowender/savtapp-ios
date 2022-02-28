@@ -9,25 +9,35 @@
 /* Begin PBXBuildFile section */
 		63FC8CD027B897C0005C398F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC8CCF27B897C0005C398F /* AppDelegate.swift */; };
 		63FC8CD227B897C0005C398F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC8CD127B897C0005C398F /* SceneDelegate.swift */; };
-		63FC8CD427B897C0005C398F /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC8CD327B897C0005C398F /* LoginController.swift */; };
 		63FC8CD727B897C0005C398F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63FC8CD527B897C0005C398F /* Main.storyboard */; };
 		63FC8CD927B897C2005C398F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63FC8CD827B897C2005C398F /* Assets.xcassets */; };
 		63FC8CDC27B897C2005C398F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63FC8CDA27B897C2005C398F /* LaunchScreen.storyboard */; };
-		63FC8CEB27B95CB3005C398F /* ServicesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC8CEA27B95CB3005C398F /* ServicesController.swift */; };
-		63FC8CED27B96110005C398F /* ServiceListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC8CEC27B96110005C398F /* ServiceListTableViewController.swift */; };
+		DDFD9AE827C862B1003AADB9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFD9AE627C862B1003AADB9 /* LoginViewController.swift */; };
+		DDFD9AE927C862B1003AADB9 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDFD9AE727C862B1003AADB9 /* LoginView.xib */; };
+		DDFD9AEB27C863DB003AADB9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFD9AEA27C863DB003AADB9 /* MainViewController.swift */; };
+		DDFD9AF327C917E9003AADB9 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFD9AF127C917E9003AADB9 /* ServiceViewController.swift */; };
+		DDFD9AF427C917E9003AADB9 /* ServiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDFD9AF227C917E9003AADB9 /* ServiceView.xib */; };
+		DDFD9AF827C948FB003AADB9 /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFD9AF627C948FB003AADB9 /* ServiceTableViewCell.swift */; };
+		DDFD9AF927C948FB003AADB9 /* ServiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDFD9AF727C948FB003AADB9 /* ServiceTableViewCell.xib */; };
+		DDFD9AFC27C95790003AADB9 /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFD9AFB27C95790003AADB9 /* ServiceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		63FC8CCC27B897C0005C398F /* savtapp.ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = savtapp.ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63FC8CCF27B897C0005C398F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63FC8CD127B897C0005C398F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		63FC8CD327B897C0005C398F /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		63FC8CD627B897C0005C398F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63FC8CD827B897C2005C398F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63FC8CDB27B897C2005C398F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63FC8CDD27B897C2005C398F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63FC8CEA27B95CB3005C398F /* ServicesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesController.swift; sourceTree = "<group>"; };
-		63FC8CEC27B96110005C398F /* ServiceListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListTableViewController.swift; sourceTree = "<group>"; };
+		DDFD9AE627C862B1003AADB9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DDFD9AE727C862B1003AADB9 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		DDFD9AEA27C863DB003AADB9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DDFD9AF127C917E9003AADB9 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
+		DDFD9AF227C917E9003AADB9 /* ServiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceView.xib; sourceTree = "<group>"; };
+		DDFD9AF627C948FB003AADB9 /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
+		DDFD9AF727C948FB003AADB9 /* ServiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceTableViewCell.xib; sourceTree = "<group>"; };
+		DDFD9AFB27C95790003AADB9 /* ServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +70,13 @@
 		63FC8CCE27B897C0005C398F /* savtapp.ios */ = {
 			isa = PBXGroup;
 			children = (
+				DDFD9AFA27C95768003AADB9 /* models */,
 				63FC8CE327B9557E005C398F /* screens */,
 				63FC8CCF27B897C0005C398F /* AppDelegate.swift */,
 				63FC8CD127B897C0005C398F /* SceneDelegate.swift */,
 				63FC8CD827B897C2005C398F /* Assets.xcassets */,
 				63FC8CD527B897C0005C398F /* Main.storyboard */,
+				DDFD9AEA27C863DB003AADB9 /* MainViewController.swift */,
 				63FC8CDA27B897C2005C398F /* LaunchScreen.storyboard */,
 				63FC8CDD27B897C2005C398F /* Info.plist */,
 			);
@@ -74,8 +86,8 @@
 		63FC8CE327B9557E005C398F /* screens */ = {
 			isa = PBXGroup;
 			children = (
-				63FC8CE927B95C90005C398F /* services */,
 				63FC8CE427B9558D005C398F /* login */,
+				DDFD9AF027C917CC003AADB9 /* services */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -83,18 +95,37 @@
 		63FC8CE427B9558D005C398F /* login */ = {
 			isa = PBXGroup;
 			children = (
-				63FC8CD327B897C0005C398F /* LoginController.swift */,
+				DDFD9AE627C862B1003AADB9 /* LoginViewController.swift */,
+				DDFD9AE727C862B1003AADB9 /* LoginView.xib */,
 			);
 			path = login;
 			sourceTree = "<group>";
 		};
-		63FC8CE927B95C90005C398F /* services */ = {
+		DDFD9AF027C917CC003AADB9 /* services */ = {
 			isa = PBXGroup;
 			children = (
-				63FC8CEA27B95CB3005C398F /* ServicesController.swift */,
-				63FC8CEC27B96110005C398F /* ServiceListTableViewController.swift */,
+				DDFD9AF527C931D9003AADB9 /* components */,
+				DDFD9AF127C917E9003AADB9 /* ServiceViewController.swift */,
+				DDFD9AF227C917E9003AADB9 /* ServiceView.xib */,
 			);
 			path = services;
+			sourceTree = "<group>";
+		};
+		DDFD9AF527C931D9003AADB9 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				DDFD9AF627C948FB003AADB9 /* ServiceTableViewCell.swift */,
+				DDFD9AF727C948FB003AADB9 /* ServiceTableViewCell.xib */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		DDFD9AFA27C95768003AADB9 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				DDFD9AFB27C95790003AADB9 /* ServiceModel.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,7 +186,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDFD9AF427C917E9003AADB9 /* ServiceView.xib in Resources */,
+				DDFD9AE927C862B1003AADB9 /* LoginView.xib in Resources */,
 				63FC8CDC27B897C2005C398F /* LaunchScreen.storyboard in Resources */,
+				DDFD9AF927C948FB003AADB9 /* ServiceTableViewCell.xib in Resources */,
 				63FC8CD927B897C2005C398F /* Assets.xcassets in Resources */,
 				63FC8CD727B897C0005C398F /* Main.storyboard in Resources */,
 			);
@@ -168,11 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63FC8CD427B897C0005C398F /* LoginController.swift in Sources */,
+				DDFD9AE827C862B1003AADB9 /* LoginViewController.swift in Sources */,
+				DDFD9AF827C948FB003AADB9 /* ServiceTableViewCell.swift in Sources */,
 				63FC8CD027B897C0005C398F /* AppDelegate.swift in Sources */,
 				63FC8CD227B897C0005C398F /* SceneDelegate.swift in Sources */,
-				63FC8CEB27B95CB3005C398F /* ServicesController.swift in Sources */,
-				63FC8CED27B96110005C398F /* ServiceListTableViewController.swift in Sources */,
+				DDFD9AFC27C95790003AADB9 /* ServiceModel.swift in Sources */,
+				DDFD9AF327C917E9003AADB9 /* ServiceViewController.swift in Sources */,
+				DDFD9AEB27C863DB003AADB9 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
