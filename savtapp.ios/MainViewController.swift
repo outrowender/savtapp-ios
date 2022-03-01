@@ -12,13 +12,13 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let isLoggedIn = "true"
+        let isLoggedIn = "false"
         
         if isLoggedIn == "true" {
             let login = LoginViewController()
             self.navigationController?.setViewControllers([login], animated: false)
         }else{
-            let services = ServiceViewController()
+            let services = ServiceListViewController()
             self.navigationController?.setViewControllers([services], animated: false)
         }
        

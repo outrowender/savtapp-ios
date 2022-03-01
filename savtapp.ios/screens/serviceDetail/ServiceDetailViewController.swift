@@ -1,27 +1,23 @@
 //
-//  LoginViewController.swift
+//  ServiceDetailViewController.swift
 //  savtapp.ios
 //
-//  Created by Wender Patrick on 24/02/22.
+//  Created by Wender Patrick on 28/02/22.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
-    
+class ServiceDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func login(_ sender: Any) {
-        let services = ServiceListViewController()
-        self.navigationController?.setViewControllers([services], animated: true)
+    func updateValues(values: String){
+        print(values)
     }
-    
 
 
     /*

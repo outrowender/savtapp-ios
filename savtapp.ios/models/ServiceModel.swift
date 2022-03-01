@@ -8,15 +8,19 @@
 import UIKit
 
 class ServiceModel {
+    var serviceId: Int
     var serviceTitle: String
     var serviceTime: String
-    var serviceDetail: String
     var serviceUsername: String
+    var serviceUsernameEmoji: Character
+    var serviceDetail: String
     
-    init(title: String, time: String, detail: String, username: String) {
+    init(id: Int, title: String, time: String, username: String, usernameEmoji: Character, detail: String) {
+        serviceId = id
         serviceTitle = title
-        serviceTime = time
-        serviceDetail = detail
+        serviceTime = time        
         serviceUsername = username
+        serviceUsernameEmoji = usernameEmoji
+        serviceDetail = detail
     }
 }
