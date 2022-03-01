@@ -10,12 +10,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServiceDetailViewController" customModule="savtapp_ios" customModuleProvider="target">
             <connections>
+                <outlet property="confirmationInput" destination="sXt-SU-nAe" id="SVO-sa-o3m"/>
+                <outlet property="descriptionLabel" destination="Rea-sK-Flf" id="AdW-7l-w9s"/>
+                <outlet property="emojiLabel" destination="RZM-sM-pGj" id="hSW-cD-O73"/>
+                <outlet property="timeLabel" destination="xY8-Zd-6yg" id="U6k-tT-zLL"/>
+                <outlet property="titleLabel" destination="zsO-1c-xYy" id="7V7-ll-3vh"/>
+                <outlet property="usernameLabel" destination="qD7-Zr-dwb" id="2mF-eV-9h4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="290"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="233"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsO-1c-xYy" userLabel="titleLabel">
@@ -30,34 +36,36 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rea-sK-Flf" userLabel="descriptionLabel">
-                    <rect key="frame" x="16" y="49" width="288" height="86"/>
-                    <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</string>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rea-sK-Flf" userLabel="descriptionLabel">
+                    <rect key="frame" x="16" y="49" width="288" height="29"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZM-sM-pGj" userLabel="userEmojiLabel">
-                    <rect key="frame" x="16" y="143" width="24" height="22"/>
+                    <rect key="frame" x="16" y="86" width="24" height="22"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Wender Patrick" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qD7-Zr-dwb" userLabel="usernameLabel">
-                    <rect key="frame" x="48" y="143" width="256" height="22"/>
+                    <rect key="frame" x="48" y="86" width="256" height="22"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmation code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sXt-SU-nAe" userLabel="confirmationInput">
-                    <rect key="frame" x="16" y="185" width="288" height="34"/>
+                    <rect key="frame" x="16" y="128" width="288" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfF-UN-Vy9" userLabel="confirmButton">
-                    <rect key="frame" x="16" y="239" width="288" height="31"/>
+                    <rect key="frame" x="16" y="182" width="288" height="31"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="tinted" title="Confirm"/>
+                    <connections>
+                        <action selector="confirmButtonPressed:" destination="-1" eventType="touchUpInside" id="6bv-wH-joe"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -84,7 +92,7 @@
                 <constraint firstItem="RZM-sM-pGj" firstAttribute="top" secondItem="Rea-sK-Flf" secondAttribute="bottom" constant="8" symbolic="YES" id="xAf-aM-T5w"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="131.25" y="-168.75"/>
+            <point key="canvasLocation" x="131.25" y="-204.375"/>
         </view>
     </objects>
     <resources>

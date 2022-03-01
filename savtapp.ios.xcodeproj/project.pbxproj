@@ -25,6 +25,7 @@
 		DDFD9B4027CDB8EF003AADB9 /* ServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFD9B3E27CDB8EF003AADB9 /* ServiceDetailViewController.swift */; };
 		DDFD9B4127CDB8EF003AADB9 /* ServiceDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDFD9B3F27CDB8EF003AADB9 /* ServiceDetailView.xib */; };
 		DDFD9B4E27CE580F003AADB9 /* ServiceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFD9B4D27CE580F003AADB9 /* ServiceRepository.swift */; };
+		DDFD9B5127CE5D89003AADB9 /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = DDFD9B5027CE5D89003AADB9 /* Fakery */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDFD9B5127CE5D89003AADB9 /* Fakery in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +197,9 @@
 			dependencies = (
 			);
 			name = savtapp.ios;
+			packageProductDependencies = (
+				DDFD9B5027CE5D89003AADB9 /* Fakery */,
+			);
 			productName = savtapp.ios;
 			productReference = 63FC8CCC27B897C0005C398F /* savtapp.ios.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 63FC8CC327B897C0005C398F;
+			packageReferences = (
+				DDFD9B4F27CE5D89003AADB9 /* XCRemoteSwiftPackageReference "Fakery" */,
+			);
 			productRefGroup = 63FC8CCD27B897C0005C398F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -492,6 +500,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DDFD9B4F27CE5D89003AADB9 /* XCRemoteSwiftPackageReference "Fakery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vadymmarkov/Fakery";
+			requirement = {
+				kind = exactVersion;
+				version = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DDFD9B5027CE5D89003AADB9 /* Fakery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDFD9B4F27CE5D89003AADB9 /* XCRemoteSwiftPackageReference "Fakery" */;
+			productName = Fakery;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 63FC8CC427B897C0005C398F /* Project object */;
 }

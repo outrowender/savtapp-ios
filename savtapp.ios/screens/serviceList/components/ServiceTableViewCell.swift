@@ -16,7 +16,6 @@ class ServiceTableViewCell: UITableViewCell {
     
     
     func update(for service: ServiceModel) {
-        
         serviceTitle.text = service.serviceTitle
         serviceTime.text = service.serviceTime
         serviceDetail.text = service.serviceDetail
@@ -30,8 +29,6 @@ class ServiceTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
 }
