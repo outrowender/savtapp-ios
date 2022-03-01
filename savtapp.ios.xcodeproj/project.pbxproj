@@ -92,10 +92,10 @@
 				63FC8CE327B9557E005C398F /* screens */,
 				63FC8CCF27B897C0005C398F /* AppDelegate.swift */,
 				63FC8CD127B897C0005C398F /* SceneDelegate.swift */,
-				63FC8CD827B897C2005C398F /* Assets.xcassets */,
 				63FC8CD527B897C0005C398F /* Main.storyboard */,
 				DDFD9AEA27C863DB003AADB9 /* MainViewController.swift */,
 				63FC8CDA27B897C2005C398F /* LaunchScreen.storyboard */,
+				63FC8CD827B897C2005C398F /* Assets.xcassets */,
 				63FC8CDD27B897C2005C398F /* Info.plist */,
 			);
 			path = savtapp.ios;
@@ -123,9 +123,9 @@
 		DDFD9AF027C917CC003AADB9 /* serviceList */ = {
 			isa = PBXGroup;
 			children = (
-				DDFD9AF527C931D9003AADB9 /* components */,
 				DDFD9AF127C917E9003AADB9 /* ServiceListViewController.swift */,
 				DDFD9AF227C917E9003AADB9 /* ServiceListView.xib */,
+				DDFD9AF527C931D9003AADB9 /* components */,
 			);
 			path = serviceList;
 			sourceTree = "<group>";

@@ -16,28 +16,37 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="Service Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mna-WH-0HS" userLabel="serviceName">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="Service Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mna-WH-0HS" userLabel="nameLabel">
                         <rect key="frame" x="10" y="10" width="277" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsb-HA-vXz" userLabel="serviceDetail">
-                        <rect key="frame" x="10" y="41" width="300" height="84.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsb-HA-vXz" userLabel="detailLabel">
+                        <rect key="frame" x="10" y="41" width="300" height="77"/>
                         <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</string>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="😄 User Name Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKI-d5-Izq" userLabel="serviceUser">
-                        <rect key="frame" x="10" y="135.5" width="300" height="14.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TV-hj-egZ" userLabel="timeLabel">
+                        <rect key="frame" x="282" y="10" width="28" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TV-hj-egZ" userLabel="serviceTime">
-                        <rect key="frame" x="282" y="10" width="28" height="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="User Name Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKI-d5-Izq" userLabel="usernameLabel">
+                        <rect key="frame" x="41" y="128" width="269" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="7Do-mk-ZV5"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9a-U3-2ys" userLabel="useremojiLabel">
+                        <rect key="frame" x="10" y="129" width="23" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -48,9 +57,11 @@
                     <constraint firstItem="Mna-WH-0HS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="AHl-z7-9B2"/>
                     <constraint firstItem="xsb-HA-vXz" firstAttribute="top" secondItem="Mna-WH-0HS" secondAttribute="bottom" constant="10" id="Bsa-nq-Ydp"/>
                     <constraint firstAttribute="trailing" secondItem="TKI-d5-Izq" secondAttribute="trailing" constant="10" id="DKz-3l-8b2"/>
+                    <constraint firstItem="A9a-U3-2ys" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="GtX-8E-euO"/>
+                    <constraint firstAttribute="bottom" secondItem="A9a-U3-2ys" secondAttribute="bottom" constant="10" id="XGB-u8-fZ3"/>
                     <constraint firstItem="Mna-WH-0HS" firstAttribute="trailing" secondItem="8TV-hj-egZ" secondAttribute="leading" constant="5" id="Y3E-Lu-3FZ"/>
                     <constraint firstItem="xsb-HA-vXz" firstAttribute="bottom" secondItem="TKI-d5-Izq" secondAttribute="top" constant="-10" id="aak-hD-9ky"/>
-                    <constraint firstItem="TKI-d5-Izq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="bzq-Tk-jEH"/>
+                    <constraint firstItem="TKI-d5-Izq" firstAttribute="leading" secondItem="A9a-U3-2ys" secondAttribute="trailing" constant="8" symbolic="YES" id="eBD-O7-KvR"/>
                     <constraint firstItem="xsb-HA-vXz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="gLt-o6-7CN"/>
                     <constraint firstAttribute="trailing" secondItem="xsb-HA-vXz" secondAttribute="trailing" constant="10" id="odB-9a-yy3"/>
                     <constraint firstAttribute="trailing" secondItem="8TV-hj-egZ" secondAttribute="trailing" constant="10" id="wbG-k4-28v"/>
@@ -59,10 +70,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="serviceDetail" destination="xsb-HA-vXz" id="b3r-2c-ROV"/>
-                <outlet property="serviceTime" destination="8TV-hj-egZ" id="QZ0-Xu-oSh"/>
-                <outlet property="serviceTitle" destination="Mna-WH-0HS" id="5W8-ei-DAD"/>
-                <outlet property="usernameLabel" destination="TKI-d5-Izq" id="BOQ-t3-ebC"/>
+                <outlet property="detailLabel" destination="xsb-HA-vXz" id="Alo-6o-fSX"/>
+                <outlet property="nameLabel" destination="Mna-WH-0HS" id="4gX-jg-YJQ"/>
+                <outlet property="timeLabel" destination="8TV-hj-egZ" id="Ec8-Bn-7mG"/>
+                <outlet property="useremojiLabel" destination="A9a-U3-2ys" id="CjF-62-ap5"/>
+                <outlet property="usernameLabel" destination="TKI-d5-Izq" id="Jbe-RA-hfD"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="52.901785714285715"/>
         </tableViewCell>
