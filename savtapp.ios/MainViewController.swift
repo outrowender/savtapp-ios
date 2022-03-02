@@ -11,29 +11,17 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let isLoggedIn = "false"
-        
-        if isLoggedIn == "true" {
+
+        // TODO: fix this logic
+        let isLoggedIn = "true"
+
+        if isLoggedIn == "false" {
             let login = LoginViewController()
             self.navigationController?.setViewControllers([login], animated: false)
-        }else{
+        } else {
             let services = ServiceListViewController()
             self.navigationController?.setViewControllers([services], animated: false)
         }
-       
 
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

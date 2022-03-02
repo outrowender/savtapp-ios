@@ -26,6 +26,8 @@
 		DDFD9B4127CDB8EF003AADB9 /* ServiceDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDFD9B3F27CDB8EF003AADB9 /* ServiceDetailView.xib */; };
 		DDFD9B4E27CE580F003AADB9 /* ServiceDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFD9B4D27CE580F003AADB9 /* ServiceDatasource.swift */; };
 		DDFD9B5127CE5D89003AADB9 /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = DDFD9B5027CE5D89003AADB9 /* Fakery */; };
+		DDFD9B5527CEFBCF003AADB9 /* ServiceReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFD9B5327CEFBCF003AADB9 /* ServiceReportViewController.swift */; };
+		DDFD9B5627CEFBCF003AADB9 /* ServiceReportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDFD9B5427CEFBCF003AADB9 /* ServiceReportView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		DDFD9B4427CE4F30003AADB9 /* savtapp.ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "savtapp.ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		DDFD9B4727CE4F8F003AADB9 /* UISheetPresentationControllerDetent+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISheetPresentationControllerDetent+Private.h"; sourceTree = "<group>"; };
 		DDFD9B4D27CE580F003AADB9 /* ServiceDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDatasource.swift; sourceTree = "<group>"; };
+		DDFD9B5327CEFBCF003AADB9 /* ServiceReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceReportViewController.swift; sourceTree = "<group>"; };
+		DDFD9B5427CEFBCF003AADB9 /* ServiceReportView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceReportView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 				63FC8CE427B9558D005C398F /* login */,
 				DDFD9AF027C917CC003AADB9 /* serviceList */,
 				DDFD9B3D27CDB8C8003AADB9 /* serviceDetail */,
+				DDFD9B5227CEFBA0003AADB9 /* serviceReport */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -181,6 +186,15 @@
 			path = datasources;
 			sourceTree = "<group>";
 		};
+		DDFD9B5227CEFBA0003AADB9 /* serviceReport */ = {
+			isa = PBXGroup;
+			children = (
+				DDFD9B5327CEFBCF003AADB9 /* ServiceReportViewController.swift */,
+				DDFD9B5427CEFBCF003AADB9 /* ServiceReportView.xib */,
+			);
+			path = serviceReport;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,6 +262,7 @@
 			files = (
 				DDFD9AF427C917E9003AADB9 /* ServiceListView.xib in Resources */,
 				DDFD9B3A27CD709F003AADB9 /* .gitignore in Resources */,
+				DDFD9B5627CEFBCF003AADB9 /* ServiceReportView.xib in Resources */,
 				DDFD9B4127CDB8EF003AADB9 /* ServiceDetailView.xib in Resources */,
 				DDFD9AE927C862B1003AADB9 /* LoginView.xib in Resources */,
 				63FC8CDC27B897C2005C398F /* LaunchScreen.storyboard in Resources */,
@@ -269,6 +284,7 @@
 				DDFD9B4E27CE580F003AADB9 /* ServiceDatasource.swift in Sources */,
 				DDFD9AF827C948FB003AADB9 /* ServiceTableViewCell.swift in Sources */,
 				63FC8CD027B897C0005C398F /* AppDelegate.swift in Sources */,
+				DDFD9B5527CEFBCF003AADB9 /* ServiceReportViewController.swift in Sources */,
 				63FC8CD227B897C0005C398F /* SceneDelegate.swift in Sources */,
 				DDFD9AFC27C95790003AADB9 /* ServiceModel.swift in Sources */,
 				DDFD9B4027CDB8EF003AADB9 /* ServiceDetailViewController.swift in Sources */,

@@ -14,11 +14,15 @@ class ServiceListViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         configureTableView()
-        configureNavigationBar()
-        
+
         loadServices()
         
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        configureNavigationBar()
+        super.viewWillAppear(true)
     }
     
     func loadServices(){
@@ -29,6 +33,7 @@ class ServiceListViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.endUpdates()
     }
     
+    // MARK: View Configuration
     func position(for bar: UIBarPositioning) -> UIBarPosition {
         return .topAttached
     }
@@ -44,10 +49,40 @@ class ServiceListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func configureNavigationBar(){
+        self.title = "Services"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        self.navigationController?.navigationBar.topItem?.title = "Services"
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
+
+    // MARK: ServiceDetail modal
+    func openServiceModal(service: ServiceModel){
+        let serviceView = ServiceDetailViewController()
+        serviceView.updateValues(for: service)
+        serviceView.onConfirm = serviceConfirmed
+        
+        if #available(iOS 15.0, *) {
+            // opens modal with custom size
+            let height = serviceView.view.frame.size.height
+            let customSize: UISheetPresentationController.Detent = ._detent(withIdentifier: "serviceView", constant: height)
+            
+            if let sheet = serviceView.sheetPresentationController {
+                sheet.detents = [customSize]
+                sheet.prefersGrabberVisible = true
+            }
+        }
+
+        self.present(serviceView, animated: true, completion: nil)
+    }
+    
+    func serviceConfirmed(){
+        self.dismiss(animated: true, completion: nil)
+        
+        let reportView = ServiceReportViewController()
+        
+        self.navigationController?.setViewControllers([reportView], animated: true)
+    }
+    
+    //MARK: - Delegate TableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let list = list {
@@ -71,22 +106,6 @@ class ServiceListViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.deselectRow(at: indexPath, animated: true)
         
         openServiceModal(service: list![indexPath.row])
-    }
-    
-    func openServiceModal(service: ServiceModel){
-        let serviceView = ServiceDetailViewController()
-        
-        serviceView.updateValues(for: service)
-        
-        let height = serviceView.view.frame.size.height
-                
-        let customSize: UISheetPresentationController.Detent = ._detent(withIdentifier: "serviceView", constant: height)
-
-        if let sheet = serviceView.sheetPresentationController {
-            sheet.detents = [customSize]
-            sheet.prefersGrabberVisible = true
-        }
-        self.navigationController?.present(serviceView, animated: true, completion: nil)
     }
     
 }

@@ -10,7 +10,7 @@ import UIKit
 class ServiceDetailViewController: UIViewController {
     
     var model: ServiceModel?
-        
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -19,13 +19,15 @@ class ServiceDetailViewController: UIViewController {
     
     @IBOutlet weak var confirmationInput: UITextField!
     
+    var onConfirm: (()->())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         if let value = model {
             updateUI(service: value)
         }
-
+        
     }
     
     func updateValues(for service: ServiceModel){
@@ -39,9 +41,13 @@ class ServiceDetailViewController: UIViewController {
         emojiLabel.text = String(service.serviceUsernameEmoji)
         usernameLabel.text = service.serviceUsername
     }
-
-    @IBAction func confirmButtonPressed(_ sender: Any) {
-        
+    
+    
+    
+    @IBAction func confirmButtonPressed(_ sender: Any) {        
+        if onConfirm != nil {
+            onConfirm!()
+        }
     }
-
+    
 }
