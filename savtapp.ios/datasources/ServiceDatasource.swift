@@ -10,18 +10,24 @@ import Fakery
 
 
 
-class ServiceRepository {
+class ServiceDatasource {
     func getServices() -> [ServiceModel] {
         
         let faker = Faker(locale: "en-US")
         
         let serviceCount = Array(repeating: 0, count: 10)
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        
         return serviceCount.enumerated().map{(index, _) in
-            ServiceModel(
+            
+            let dateString = dateFormatter.string(from: faker.date.forward(10))
+            
+            return ServiceModel(
                 id: index,
                 title: faker.name.title(),
-                time: "10h20",
+                time: dateString,
                 username: faker.name.name(),
                 usernameEmoji: "🤡",
                 detail: faker.lorem.paragraphs(amount: 1)

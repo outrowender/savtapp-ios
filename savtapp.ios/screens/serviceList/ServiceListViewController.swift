@@ -22,10 +22,10 @@ class ServiceListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func loadServices(){
-        let serviceRepository = ServiceRepository()
+        let serviceDatasource = ServiceDatasource()
         
         tableView.beginUpdates()
-        list = serviceRepository.getServices()
+        list = serviceDatasource.getServices()
         tableView.endUpdates()
     }
     
