@@ -14,13 +14,17 @@ class ServiceModel {
     var serviceUsername: String
     var serviceUsernameEmoji: Character
     var serviceDetail: String
+    var serviceConfirmed: Bool
+    var serviceComplete: Bool
     
-    init(id: Int, title: String, time: String, username: String, usernameEmoji: Character, detail: String) {
+    init(id: Int, title: String, time: String, username: String, usernameEmoji: Character, detail: String, confirmed: Bool, complete: Bool) {
         serviceId = id
         serviceTitle = title
         serviceTime = time        
         serviceUsername = username
         serviceUsernameEmoji = usernameEmoji
         serviceDetail = detail
+        serviceConfirmed = confirmed
+        serviceComplete = complete
     }
 }

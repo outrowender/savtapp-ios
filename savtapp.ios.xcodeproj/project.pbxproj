@@ -12,6 +12,8 @@
 		63FC8CD727B897C0005C398F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63FC8CD527B897C0005C398F /* Main.storyboard */; };
 		63FC8CD927B897C2005C398F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63FC8CD827B897C2005C398F /* Assets.xcassets */; };
 		63FC8CDC27B897C2005C398F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63FC8CDA27B897C2005C398F /* LaunchScreen.storyboard */; };
+		DD37712627D0356E00A670E1 /* ServiceConfirmationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD37712427D0356E00A670E1 /* ServiceConfirmationViewCell.swift */; };
+		DD37712727D0356E00A670E1 /* ServiceConfirmationViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD37712527D0356E00A670E1 /* ServiceConfirmationViewCell.xib */; };
 		DDFD9AE827C862B1003AADB9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFD9AE627C862B1003AADB9 /* LoginViewController.swift */; };
 		DDFD9AE927C862B1003AADB9 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDFD9AE727C862B1003AADB9 /* LoginView.xib */; };
 		DDFD9AEB27C863DB003AADB9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFD9AEA27C863DB003AADB9 /* MainViewController.swift */; };
@@ -38,6 +40,8 @@
 		63FC8CD827B897C2005C398F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63FC8CDB27B897C2005C398F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63FC8CDD27B897C2005C398F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD37712427D0356E00A670E1 /* ServiceConfirmationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfirmationViewCell.swift; sourceTree = "<group>"; };
+		DD37712527D0356E00A670E1 /* ServiceConfirmationViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceConfirmationViewCell.xib; sourceTree = "<group>"; };
 		DDFD9AE627C862B1003AADB9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DDFD9AE727C862B1003AADB9 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		DDFD9AEA27C863DB003AADB9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -45,7 +49,7 @@
 		DDFD9AF227C917E9003AADB9 /* ServiceListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceListView.xib; sourceTree = "<group>"; };
 		DDFD9AF627C948FB003AADB9 /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		DDFD9AF727C948FB003AADB9 /* ServiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceTableViewCell.xib; sourceTree = "<group>"; };
-		DDFD9AFB27C95790003AADB9 /* ServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; };
+		DDFD9AFB27C95790003AADB9 /* ServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		DDFD9B3927CD709F003AADB9 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DDFD9B3B27CD713D003AADB9 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		DDFD9B3E27CDB8EF003AADB9 /* ServiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +129,24 @@
 			path = login;
 			sourceTree = "<group>";
 		};
+		DD37712227D0352C00A670E1 /* serviceCell */ = {
+			isa = PBXGroup;
+			children = (
+				DDFD9AF627C948FB003AADB9 /* ServiceTableViewCell.swift */,
+				DDFD9AF727C948FB003AADB9 /* ServiceTableViewCell.xib */,
+			);
+			path = serviceCell;
+			sourceTree = "<group>";
+		};
+		DD37712327D0354A00A670E1 /* serviceConfirmationCell */ = {
+			isa = PBXGroup;
+			children = (
+				DD37712427D0356E00A670E1 /* ServiceConfirmationViewCell.swift */,
+				DD37712527D0356E00A670E1 /* ServiceConfirmationViewCell.xib */,
+			);
+			path = serviceConfirmationCell;
+			sourceTree = "<group>";
+		};
 		DDFD9AF027C917CC003AADB9 /* serviceList */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,8 +160,8 @@
 		DDFD9AF527C931D9003AADB9 /* components */ = {
 			isa = PBXGroup;
 			children = (
-				DDFD9AF627C948FB003AADB9 /* ServiceTableViewCell.swift */,
-				DDFD9AF727C948FB003AADB9 /* ServiceTableViewCell.xib */,
+				DD37712327D0354A00A670E1 /* serviceConfirmationCell */,
+				DD37712227D0352C00A670E1 /* serviceCell */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -270,6 +292,7 @@
 				63FC8CD927B897C2005C398F /* Assets.xcassets in Resources */,
 				DDFD9B3C27CD713D003AADB9 /* readme.md in Resources */,
 				63FC8CD727B897C0005C398F /* Main.storyboard in Resources */,
+				DD37712727D0356E00A670E1 /* ServiceConfirmationViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +309,7 @@
 				63FC8CD027B897C0005C398F /* AppDelegate.swift in Sources */,
 				DDFD9B5527CEFBCF003AADB9 /* ServiceReportViewController.swift in Sources */,
 				63FC8CD227B897C0005C398F /* SceneDelegate.swift in Sources */,
+				DD37712627D0356E00A670E1 /* ServiceConfirmationViewCell.swift in Sources */,
 				DDFD9AFC27C95790003AADB9 /* ServiceModel.swift in Sources */,
 				DDFD9B4027CDB8EF003AADB9 /* ServiceDetailViewController.swift in Sources */,
 				DDFD9AF327C917E9003AADB9 /* ServiceListViewController.swift in Sources */,

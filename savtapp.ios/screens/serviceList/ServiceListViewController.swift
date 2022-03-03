@@ -14,7 +14,7 @@ class ServiceListViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         configureTableView()
-
+        
         loadServices()
         
         super.viewDidLoad()
@@ -40,8 +40,10 @@ class ServiceListViewController: UIViewController, UITableViewDelegate, UITableV
     
     func configureTableView(){
         let nib = UINib(nibName: "ServiceTableViewCell", bundle: nil)
+        let nibConfirmation = UINib(nibName: "ServiceConfirmationViewCell", bundle: nil)
         
         tableView.register(nib, forCellReuseIdentifier: "ServiceCell")
+        tableView.register(nibConfirmation, forCellReuseIdentifier: "ServiceConfirmationCell")
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
@@ -52,8 +54,20 @@ class ServiceListViewController: UIViewController, UITableViewDelegate, UITableV
         self.title = "Services"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        
+        let availableAction = UIAction(title: "Available", image: UIImage(systemName: "clock")) { action in }
+        let doneAction = UIAction(title: "Done", image: UIImage(systemName: "checkmark.circle")) { action in }
+        
+        let menuBarButton = UIBarButtonItem(
+            title: "Filter",
+            image: UIImage(systemName:"line.3.horizontal.decrease.circle"),
+            primaryAction: nil,
+            menu: UIMenu(title: "", children: [availableAction, doneAction])
+        )
+        
+        self.navigationItem.rightBarButtonItem = menuBarButton
     }
-
+    
     // MARK: ServiceDetail modal
     func openServiceModal(service: ServiceModel){
         let serviceView = ServiceDetailViewController()
@@ -70,15 +84,13 @@ class ServiceListViewController: UIViewController, UITableViewDelegate, UITableV
                 sheet.prefersGrabberVisible = true
             }
         }
-
+        
         self.present(serviceView, animated: true, completion: nil)
     }
     
     func serviceConfirmed(){
         self.dismiss(animated: true, completion: nil)
-        
         let reportView = ServiceReportViewController()
-        
         self.navigationController?.setViewControllers([reportView], animated: true)
     }
     
@@ -93,19 +105,37 @@ class ServiceListViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceCell", for: indexPath) as! ServiceTableViewCell
-        
-        if let list = list {
-            cell.update(for: list[indexPath.row])
+        guard let serviceList = list else {
+            return UITableViewCell()
         }
         
-        return cell
+        let item = serviceList[indexPath.row]
+        
+        if item.serviceConfirmed {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceCell", for: indexPath) as! ServiceTableViewCell
+            
+            cell.update(for: item)
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceConfirmationCell", for: indexPath) as! ServiceConfirmationViewCell
+            
+            cell.update(for: item)
+            return cell
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        openServiceModal(service: list![indexPath.row])
+        if let serviceList = list {
+            let item = serviceList[indexPath.row]
+            
+            if(item.serviceConfirmed){
+                openServiceModal(service: list![indexPath.row])
+            }
+            
+        }
     }
     
 }

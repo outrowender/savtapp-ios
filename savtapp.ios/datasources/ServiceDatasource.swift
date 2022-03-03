@@ -15,12 +15,14 @@ class ServiceDatasource {
         
         let faker = Faker(locale: "en-US")
         
-        let serviceCount = Array(repeating: 0, count: 10)
+        let serviceCount = Array(repeating: 0, count: 20)
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         
-        return serviceCount.enumerated().map{(index, _) in
+        let emojiList: [Character] = ["🤠", "🤡", "🥸", "👽", "🤖", "💩", "🧑‍🦰", "🥵", "👹", "🧐"]
+        
+        return serviceCount.enumerated().map{ (index, _) -> ServiceModel in
             
             let dateString = dateFormatter.string(from: faker.date.forward(10))
             
@@ -29,8 +31,10 @@ class ServiceDatasource {
                 title: faker.name.title(),
                 time: dateString,
                 username: faker.name.name(),
-                usernameEmoji: "🤡",
-                detail: faker.lorem.paragraphs(amount: 1)
+                usernameEmoji: emojiList[faker.number.randomInt(min: 0, max: emojiList.count)],
+                detail: faker.lorem.paragraphs(amount: 1),
+                confirmed: faker.number.randomBool(),
+                complete: faker.number.randomBool()
             )
         }
         
